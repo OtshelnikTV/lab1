@@ -12,9 +12,9 @@ public class AlbinoRabbitAI extends BaseAI{
     public synchronized void calculateMovement() {
         System.out.println(getName());
         for (Rabbit rabbit : RabbitRepository.getInstance().getVectorWhere(AlbinoRabbit.class)) {
-            int x = rabbit.getX();
-            int speed = rabbit.getSpeed();
-            int fieldWidth = Habitat.getWidth() - rabbit.getSize();
+            double x = rabbit.getX();
+            double speed = rabbit.getSpeed();
+            double fieldWidth = Habitat.getWidth() - rabbit.getSize();
 
             //check direction
             if (x >= fieldWidth) {

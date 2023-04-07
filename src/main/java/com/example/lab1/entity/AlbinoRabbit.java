@@ -1,6 +1,7 @@
 package com.example.lab1.entity;
 
 import com.example.lab1.core.Habitat;
+import com.example.lab1.view.RabbitController;
 import javafx.scene.image.Image;
 
 import java.util.Random;
@@ -8,10 +9,10 @@ import java.util.Random;
 public class AlbinoRabbit extends Rabbit{
     private static final Image image = new Image(System.getProperty("user.dir") + "\\src\\main\\resources\\assets\\albino_rabbit.png");
     public static int count = 0;
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private Direction direction = Direction.Left;
-    private int speed = 3;
+    private double speed = 300.0 / RabbitController.FPS;
     private final int birthTime;
     private final int lifeTime;
     private final int id;
@@ -32,12 +33,12 @@ public class AlbinoRabbit extends Rabbit{
     }
 
     @Override
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
     @Override
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
@@ -85,17 +86,17 @@ public class AlbinoRabbit extends Rabbit{
     }
 
     @Override
-    public int getX() {
+    public double getX() {
         return x;
     }
 
     @Override
-    public int getY() {
+    public double getY() {
         return y;
     }
 
     @Override
-    public int getSpeed() {
+    public double getSpeed() {
         return speed;
     }
 }

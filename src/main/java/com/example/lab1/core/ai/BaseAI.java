@@ -1,5 +1,7 @@
 package com.example.lab1.core.ai;
 
+import com.example.lab1.view.RabbitController;
+
 abstract class BaseAI extends Thread {
     private volatile boolean isActive = false;
 
@@ -22,7 +24,7 @@ abstract class BaseAI extends Thread {
                     }
                 }
                 calculateMovement();
-                Thread.sleep(1000/120);
+                Thread.sleep(1000/ RabbitController.FPS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

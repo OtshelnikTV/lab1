@@ -77,10 +77,6 @@ public class Habitat {
         spawnRabbits();
     }
 
-    public void updateMove() {
-
-    }
-
     private void spawnDefaultRabbit() {
         int id = generateId();
         RabbitRepository.getInstance().add(new DefaultRabbit(simulationTime, defaultRabbitLifeTime, id));

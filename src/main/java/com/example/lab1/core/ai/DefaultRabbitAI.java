@@ -11,9 +11,9 @@ public class DefaultRabbitAI extends BaseAI {
     public synchronized void calculateMovement() {
         System.out.println(getName());
         for (Rabbit rabbit : RabbitRepository.getInstance().getVectorWhere(DefaultRabbit.class)) {
-            int x = rabbit.getX();
-            int y = rabbit.getY();
-            int speed = rabbit.getSpeed();
+            double x = rabbit.getX();
+            double y = rabbit.getY();
+            double speed = rabbit.getSpeed();
             int fieldWidth = Habitat.getWidth() - rabbit.getSize();
             int fieldHeight = Habitat.getHeight() - rabbit.getSize();
 

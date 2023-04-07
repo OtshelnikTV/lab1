@@ -20,7 +20,7 @@ import java.util.Vector;
 
 public class RabbitController implements IRabbitController {
 
-    private final int FPS = 120;
+    public static final int FPS = 144;
     private final IRabbitPresenter presenter = new RabbitPresenter(this);
     private Timer timer;
 
