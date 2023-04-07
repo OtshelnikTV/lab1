@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox onKeyPressed="#onKeyPressed" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1.view.RabbitController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="startMenuItem" mnemonicParsing="false" text="Start" />
+                        <MenuItem fx:id="stopMenuItem" mnemonicParsing="false" text="Stop" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.7556390977443609" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Pane fx:id="pane" layoutX="-1.0" layoutY="-2.0" prefHeight="500.0" prefWidth="600.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="startButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Start" />
+                        <Button fx:id="stopButton" layoutX="79.0" layoutY="14.0" mnemonicParsing="false" text="Stop" />
+                        <CheckBox fx:id="showInfoCheckBox" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" text="Show simulation info" />
+                        <RadioButton fx:id="showTimeRadio" layoutX="14.0" layoutY="83.0" mnemonicParsing="false" text="Show time" />
+                        <RadioButton fx:id="hideTimeRadio" layoutX="14.0" layoutY="107.0" mnemonicParsing="false" text="Hide time" />
+                        <TextField fx:id="defaultRabbitIntervalTextField" layoutX="13.0" layoutY="135.0" prefHeight="25.0" prefWidth="168.0" promptText="Default rabbit spawn interval" text="3" />
+                        <TextField fx:id="albinoRabbitIntervalTextField" layoutX="13.0" layoutY="169.0" prefHeight="25.0" prefWidth="168.0" promptText="Albino rabbit spawn interval" text="5" />
+                        <Slider fx:id="defaultRabbitProbabilitySlider" layoutX="26.0" layoutY="224.0" majorTickUnit="20" min="10" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="90" />
+                        <Text layoutX="11.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Default rabbit spawn probability" />
+                        <Text layoutX="27.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Albino rabbits percentage" />
+                        <Slider fx:id="albinoRabbitPercentageSlider" layoutX="26.0" layoutY="289.0" majorTickUnit="20" min="10" minorTickCount="1" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="30" />
+                        <TextField fx:id="defaultLifeTimeTextField" layoutX="17.0" layoutY="368.0" prefHeight="25.0" prefWidth="73.0" text="30" />
+                        <TextField fx:id="albinoLifeTimeTextField" layoutX="101.0" layoutY="368.0" prefHeight="25.0" prefWidth="73.0" text="20" />
+                        <Text layoutX="17.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Default rabbit life time" wrappingWidth="73.0" />
+                        <Text layoutX="101.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Albino rabbit life time" wrappingWidth="73.0" />
+                        <Button fx:id="currentObjectsButton" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" text="Current objects" />
+                  <CheckBox fx:id="defaultRabbitAICheckBox" layoutX="14.0" layoutY="435.0" mnemonicParsing="false" selected="true" text="Default AI" />
+                  <CheckBox fx:id="albinoRabbitAICheckBox" layoutX="101.0" layoutY="435.0" mnemonicParsing="false" selected="true" text="Albino AI" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</VBox>
